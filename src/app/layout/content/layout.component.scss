@@ -1,0 +1,29 @@
+.sidenav-container{
+  flex: 1;
+  height: 100%;
+  min-height: 100%;
+  position: fixed;
+  width:  100%;
+  min-width: 100%;
+  background: #ffff;
+}
+.sidenav-content{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.sidenav{
+  width: 240px;
+}
+.main {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1080px;
+  padding-top:1.5rem;
+}

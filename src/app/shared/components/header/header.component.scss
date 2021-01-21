@@ -1,0 +1,38 @@
+.header {
+    border-bottom: 1px solid #dfdfdf;
+    background: #fff;
+
+    &-content {
+
+        width: 80%;
+        max-width: 1080px;
+        margin: auto;
+        align-items: center;
+
+        .header-profile {
+            padding-top: 1.5rem;
+            .user {
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+        }
+
+        .header-navigation {
+        
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+
+            ul {
+                margin-top:0;
+                li {
+                    display: initial;
+                    padding: 1rem;
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+}
+
