@@ -1,15 +1,18 @@
-<mat-sidenav-container class="sidenav-container">
-  <!-- <mat-sidenav class="app-sidenav" #sidenav [opened]="!pantallaSmall() ? 'over':'side'"> -->
-  <div class="sidenav-content">
-    <app-header></app-header>
-    <div class="main">
-        <router-outlet></router-outlet>
+<div class="main-container">
+  <mat-sidenav-container class="sidenav-container">
+    <!-- <mat-sidenav class="app-sidenav" #sidenav [opened]="!pantallaSmall() ? 'over':'side'"> -->
+      <app-header class="app-header"></app-header>
+      <div class="sidenav-content">
+      <div class="main">
+          <router-outlet></router-outlet>
+      </div>
+      <!-- <button type="button" mat-button (click)="drawer.toggle()">Toggle sidenav</button> -->
     </div>
-    <!-- <button type="button" mat-button (click)="drawer.toggle()">Toggle sidenav</button> -->
-  </div>
-  <mat-sidenav #drawer class="sidenav" #sidenav opened="false" mode="side">
-    <mat-toolbar color="primary">
-      Menu
-    </mat-toolbar>
-  </mat-sidenav>
-</mat-sidenav-container>
+    <mat-sidenav #drawer class="sidenav" #sidenav opened="false" mode="side">
+      <mat-toolbar color="primary">
+        Menu
+      </mat-toolbar>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>
+

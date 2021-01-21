@@ -1,13 +1,19 @@
 <header class="header">
   <div class="header-content">
-    <div class="header-profile">
-      <span class="user">Gamaliel</span>
-      <span class=""></span>
-    </div>
+    <a class="header-user">
+      <img src="assets/img/logo.png" alt="">
+      <div class="header-profile">
+        <span class="user">Gamaliel Abanto</span>
+        <span class="rol">Desarrollador Web</span>
+      </div>
+    </a>
     <div class="header-navigation">
       <ul>
         <li (click)="redirectTo('')">Inicio</li>
         <li (click)="redirectTo('/aboutme')">Sobre Mi</li>
+        <li>
+          <mat-slide-toggle></mat-slide-toggle>
+        </li>
       </ul>
     </div>
   </div>

@@ -1,4 +1,12 @@
 
 @import 'assets/scss/app/app.scss';
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body {
+    height: 100%;
+}
+body {
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
+    color: #4fc08d !important;
+}
