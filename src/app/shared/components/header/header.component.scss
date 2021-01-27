@@ -1,10 +1,9 @@
 .header {
-    border-bottom: 1px solid #dedede57;
-    background: #fffF;
-    
-    &-content {
+    background: #f3f6f9;
+    display: flex;
 
-        width: 90%;
+    &-content {
+        width: 95%;
         margin: auto;
         align-items: center;
         display: flex;
@@ -20,7 +19,6 @@
             display: flex;
             position: absolute;
             align-items: center;
-            height: 100%;
             text-decoration: none;
         
             .header-profile {
@@ -42,7 +40,7 @@
         }
 
         .header-navigation {
-            padding: 1.9rem 0;
+            padding: 1.5rem 0;
             width: 100%;
             display: flex;
             justify-content: flex-end;
@@ -52,17 +50,20 @@
                 li {
                     display: initial;
                     padding: 0.8rem;
-                    font: 1rem "Times New Roman";
+                    // font: 1rem "Times New Roman";
                     font-weight: bold;
-                    color: #494949e8;
-                    cursor: pointer;
-                    &:hover {
-                        color: #4fc08d;
+                    a {
+                        color: #494949e8;
+                        cursor: pointer;
+                        &:hover {
+                            color: #4fc08d;
+                            border-bottom: 2px solid #4fc08d;
+                        }
                     }
+                    
                 }
             }
 
         }
     }
 }
-

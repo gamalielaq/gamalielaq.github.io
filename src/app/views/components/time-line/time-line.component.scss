@@ -1,0 +1,69 @@
+.timeline {
+    position: relative;
+}
+.timeline:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    top: 0;
+    bottom: 0;
+    background-color: #cbcbcb;
+}
+.timeline .timeline-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1.7rem;
+}
+.timeline .timeline-item .timeline-label {
+    width: 62px;
+    flex-shrink: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    color: #3f4254;
+}
+.fw-bolder {
+    font-weight: 600!important;
+}
+.text-gray-800 {
+    color: #3f4254!important;
+}
+.fs-6 {
+    font-size: 1.075rem!important;
+}
+.timeline .timeline-item .timeline-badge {
+    flex-shrink: 0;
+    background:#ffffff;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    margin-top: 1px;
+    margin-left: -.5rem;
+    padding: 3px!important;
+    border: 6px solid #cbcbcb;
+}
+.symbol {
+    display: flex;
+    flex-shrink: 0;
+    position: relative;
+    border-radius: .65rem;
+    align-items: center;
+}
+.symbol.symbol-35px .symbol-label {
+    width: 35px;
+    height: 35px;
+}
+.mh-25px {
+    max-height: 20px!important;
+}
+img, svg {
+    vertical-align: middle;
+}
+
+

@@ -4,15 +4,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { Router, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './components/home/home.component';
-import { AboutmeComponent } from './components/aboutme/aboutme.component';
+// import { HomeComponent } from './components/home/home.component';
+// import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { SharedMaterialModule } from 'src/app/shared/shared-material.module';
+// import { TimeLineComponent } from './components/time-line/time-line.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutmeComponent
+    // HomeComponent, 
+    // AboutmeComponent,
+    // TimeLineComponent
   ],
   imports: [
     BrowserModule,

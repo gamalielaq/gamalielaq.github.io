@@ -1,0 +1,17 @@
+.sidebar {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.25rem;
+}
+
+@media screen and (min-width: 999px) {
+    .sidebar {
+        position: fixed;
+        left:0;
+        top:0;
+        bottom: 0;
+        width: 400px;
+    }
+}

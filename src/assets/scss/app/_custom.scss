@@ -1,0 +1,53 @@
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/variables";
+
+$success: #42b983;
+$secondary: #494949e8;
+
+$link-color: none;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+//-- custom-colors start -------
+$custom-colors: (
+   "black": $black,
+   "side" : #f9f2e7,
+   "dark-500" :#181c32 
+)  !default;
+
+    // Merge custom-colors
+    $theme-colors: map-merge($theme-colors, $custom-colors);
+
+// -- custom-colors end -------
+
+//-- custom-font-sizes-start ------
+$custom-sizes: (
+    9:  9px,
+    10: 10px,
+    11: 11px,
+    12: 12px,
+    13: 13px,
+    14: 14px,
+    15: 15px,
+    16: 16px
+) !default;
+
+    // Merge custom-sizes
+    $font-sizes: map-merge($font-sizes, $custom-sizes);
+
+//-- custom-font-sizes-end -------
+
+
+// Import Bootstrap 
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+

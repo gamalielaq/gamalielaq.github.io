@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './content/layout.component';
-import { HomeComponent } from '../components/home/home.component';
-import { AboutmeComponent } from '../components/aboutme/aboutme.component';
+import { HomeComponent } from '../views/pages/home/home.component';
+import { AboutmeComponent } from '../views/pages/aboutme/aboutme.component';
 
 const routes: Routes = [
   {
@@ -10,10 +10,10 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path:'', component:HomeComponent,
-       // loadChildren: () => import('./../views/home/dashboard.module').then((m) => m.DashboardModule),
-      },
-      {path:'aboutme', component:AboutmeComponent}
+        path:'',
+       loadChildren: () => import('./../views/views.module').then((m) => m.ViewsModule),
+      }
+      // {path:'aboutme', component:AboutmeComponent}
     ],
   },
 ];
