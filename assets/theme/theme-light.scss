@@ -1,6 +1,6 @@
-@import "../../../../node_modules/bootstrap/scss/functions";
-@import "../../../../node_modules/bootstrap/scss/mixins";
-@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/variables";
 
 $success: #42b983;
 $secondary: #494949e8;
@@ -21,8 +21,10 @@ $theme-colors: (
 //-- custom-colors start -------
 $custom-colors: (
    "black": $black,
-   "side" : #f9f2e7,
-   "dark-500" :#181c32 
+   "side" : #ffff,
+   "dark-500" :#181c32,
+   "purple" : $purple
+
 )  !default;
 
     // Merge custom-colors
@@ -49,5 +51,11 @@ $custom-sizes: (
 
 
 // Import Bootstrap 
-@import "../../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
 
+body {
+    background: #f3f6f9;
+}
+header {
+    background: #f3f6f9;
+}

@@ -1,0 +1,84 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+$success: #7cffc4;
+$primary: #00d4ff;
+$secondary: #c3c3c3;
+$link-color: none;
+$purple: #ffff;
+$gray-800: #ffff;
+
+$dark-primary: $dark;
+$dark-second: #40464d;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $white,
+  "gray-800":   $gray-800,
+  "dark-400" : #f1ecec
+);
+
+//-- custom-colors start -------
+$custom-colors: (
+   "black": $black,
+   "side" : $dark-primary,
+   "dark-500" :#181c32,
+   "red-100":  #c6ffee36,
+   "purple" : $purple
+
+)  !default;
+
+    // Merge custom-colors
+    $theme-colors: map-merge($theme-colors, $custom-colors);
+
+// -- custom-colors end -------
+
+//-- custom-font-sizes-start ------
+$custom-sizes: (
+    9:  9px,
+    10: 10px,
+    11: 11px,
+    12: 12px,
+    13: 13px,
+    14: 14px,
+    15: 15px,
+    16: 16px
+) !default;
+
+    // Merge custom-sizes
+    $font-sizes: map-merge($font-sizes, $custom-sizes);
+
+//-- custom-font-sizes-end -------
+
+
+// Import Bootstrap 
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+    background: $dark-second;
+}
+.text-muted{
+    color:#c3c3c3 !important;
+}
+header {
+    background: $dark-second;
+}
+.card {
+    background-color: $dark-primary ;
+    border:1px solid #a49898;
+}   
+.timeline-content {
+    span {
+        color: #c3c3c3;
+    }
+    i{
+        color: #FFF;
+    }
+}  
