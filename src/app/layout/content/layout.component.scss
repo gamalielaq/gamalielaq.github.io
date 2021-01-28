@@ -36,7 +36,7 @@
         }
 
         .sidenav {
-            width: 320px;
+            width: 280px;
             position: fixed;
         }
     }
@@ -47,3 +47,10 @@
         margin-left: 400px;
     }
   }
+  @media screen and (max-width: 999px ) {
+    .main-content{
+        margin-top: 80px;
+    }
+  }
+
+  
