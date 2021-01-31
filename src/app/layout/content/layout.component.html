@@ -3,8 +3,8 @@
         <mat-sidenav-content>
             <div class="sidenav-content">
                 <!-- d-none d-lg-block -->
-                <app-sidebar class="d-none d-lg-block"></app-sidebar>    
-                <div class="main mb-5">
+                <!-- <app-sidebar class="d-none d-lg-block"></app-sidebar>     -->
+                <div class="main mb-5" [ngClass]="{'main-fluid': layout}">
                     <!-- <div class="pb-4"> -->
                         <app-header class="app-header"></app-header>
                         <div class="main-content">

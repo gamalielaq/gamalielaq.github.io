@@ -1,4 +1,5 @@
 .header {
+
     display: flex;
 
     @media screen and (max-width: 999px) {
@@ -16,62 +17,5 @@
         margin: auto;
         align-items: center;
         display: flex;
-
-        img {
-            max-height: 70%;
-            border-radius: 50%;
-            cursor: pointer;      
-        }
-        
-        .header-user {
-                
-            display: flex;
-            position: absolute;
-            align-items: center;
-            text-decoration: none;
-        
-            .header-profile {
-                margin-left: 0.5rem;
-                span {
-                    display: block;
-                }
-                .user {
-                    font-size: 1.3rem;
-                    font-weight: 500;
-                    color: #000000;
-                }
-                .rol {
-                    font-size: 0.8rem;
-                    font-weight: 500;
-                    color: #494949e8
-                }
-            }
-        }
-
-        .header-navigation {
-            padding: 1.5rem 0;
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-
-            ul {
-                margin-bottom:0;
-                li {
-                    display: initial;
-                    padding: 0.8rem;
-                    font-weight: bold;
-                    a {
-                        color: #494949e8;
-                        cursor: pointer;
-                        &:hover {
-                            color: #4fc08d;
-                            border-bottom: 2px solid #4fc08d;
-                        }
-                    }
-                    
-                }
-            }
-
-        }
     }
 }

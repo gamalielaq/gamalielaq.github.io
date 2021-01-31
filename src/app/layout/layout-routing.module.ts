@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './content/layout.component';
-import { HomeComponent } from '../views/pages/home/home.component';
-import { AboutmeComponent } from '../views/pages/aboutme/aboutme.component';
 
 const routes: Routes = [
   {
@@ -11,11 +9,10 @@ const routes: Routes = [
     children: [
       {
         path:'',
-       loadChildren: () => import('./../views/views.module').then((m) => m.ViewsModule),
+       loadChildren: () => import('./../views/views.module').then((m) => m.ViewsModule)
       }
-      // {path:'aboutme', component:AboutmeComponent}
     ],
-  },
+  }
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

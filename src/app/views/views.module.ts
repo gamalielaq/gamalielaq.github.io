@@ -11,10 +11,11 @@ import { TimeLineComponent } from './components/time-line/time-line.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { ProfileDescriptionComponent } from './modals/profile-description/profile-description.component'
+import { ProfileDescriptionComponent } from './modals/profile-description/profile-description.component';
+import { PortafolioComponent } from './pages/portafolio/portafolio.component'
 
 @NgModule({
-  declarations: [HomeComponent,AboutmeComponent,TimeLineComponent, ServicesComponent, ExperienceComponent, SkillsComponent, ProfileDescriptionComponent],
+  declarations: [HomeComponent,AboutmeComponent,TimeLineComponent, ServicesComponent, ExperienceComponent, SkillsComponent, ProfileDescriptionComponent, PortafolioComponent],
   imports: [CommonModule, SharedModule,  RouterModule.forChild(ViewRoutes)],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   entryComponents: [],  

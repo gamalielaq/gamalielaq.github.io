@@ -1,7 +1,3 @@
-.mat-sidenav-content {
-    // overflow: hidden;
-    // height: 100vh;
-}
 .main-container {    
     display: flex;
     flex-direction: column;
@@ -29,9 +25,6 @@
             .main {
                 margin-right: auto;
                 width: 100%;
-
-                // position: relative;
-                // top: 87px;
             }
         }
 
@@ -41,7 +34,9 @@
         }
     }
   }
-
+  .main-fluid {
+    margin-left: 0px !important;
+  }
   @media screen and (min-width: 999px ) {
     .main {
         margin-left: 400px;
@@ -52,5 +47,3 @@
         margin-top: 80px;
     }
   }
-
-  
