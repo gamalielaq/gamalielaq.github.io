@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import {ProfileDescriptionComponent} from 'src/app/views/modals/profile-description/profile-description.component';
+import { ViewFileComponent } from '../view-file/view-file.component'
 
 @Component({
   selector: 'app-sidebar',
@@ -15,11 +15,11 @@ export class SidebarComponent implements OnInit {
   }
 
   
-  openDialog() {
-    const dialogRef = this.dialog.open(ProfileDescriptionComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+  openViewCv() {
+    this.dialog.open(ViewFileComponent, {
+      data: {
+        data: 'assets/doc/cv-gamaliel.pdf'
+      }
     });
   }
 }

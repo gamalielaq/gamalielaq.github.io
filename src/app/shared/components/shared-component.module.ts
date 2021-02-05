@@ -5,9 +5,10 @@ import { SharedMaterialModule } from 'src/app/shared/shared-material.module';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ThemeService } from '../../back/services/theme.service';
+import { ViewFileComponent } from './view-file/view-file.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, SidebarComponent],
+  declarations: [HeaderComponent, FooterComponent, SidebarComponent, ViewFileComponent],
   imports: [CommonModule,SharedMaterialModule],
   exports: [HeaderComponent, FooterComponent, SidebarComponent],
   entryComponents: [],

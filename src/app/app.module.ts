@@ -5,17 +5,13 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { HomeComponent } from './components/home/home.component';
-// import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { SharedMaterialModule } from 'src/app/shared/shared-material.module';
-// import { TimeLineComponent } from './components/time-line/time-line.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    // HomeComponent, 
-    // AboutmeComponent,
-    // TimeLineComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +19,8 @@ import { SharedMaterialModule } from 'src/app/shared/shared-material.module';
     BrowserAnimationsModule,
     RouterModule,
     SharedMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -160,3 +160,24 @@
   background-color: #f64e60;
   border-color: #f64e60;
 }
+
+.mat-form-field-infix {
+  min-width: 100% !important;
+  width: auto !important;
+}
+
+.mat-form-field-prefix {
+  position: relative;
+  // left: 20px;
+}
+
+.mat-select-value, .mat-select-arrow-wrapper, .mat-form-field-underline {
+  display: none !important;
+}
+.cdk-overlay-pane {
+  // left: 1372.21px !important;
+}
+
+.mat-select-panel {
+  min-width: 100% !important;
+}
