@@ -2,7 +2,9 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 @import url("https://cdnjs.com/libraries/font-awesome");
 
-
+// :root {
+//     --bs-blue: #0d6efd
+// }
 
 @import 'assets/scss/app/app.scss';
 
@@ -14,7 +16,7 @@ body {
     font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
-    color: #4fc08d !important;
+    // color: #4fc08d !important;
     // background: #f3f6f9;
 }
 

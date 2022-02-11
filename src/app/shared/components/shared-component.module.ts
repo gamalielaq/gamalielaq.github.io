@@ -4,7 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { SharedMaterialModule } from 'src/app/shared/shared-material.module';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { ThemeService } from '../../back/services/theme.service';
+import { ThemeService } from '../../services/theme.service';
 import { ViewFileComponent } from './view-file/view-file.component';
 
 @NgModule({

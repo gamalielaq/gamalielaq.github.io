@@ -4,3 +4,21 @@ footer {
     background-color: black;
     color:white;
 }
+.footer {
+    min-height: 350px;
+}
+
+.mat-icon-button  {
+    background: #242625;
+    width: 60px;
+    height: 60px;
+}
+
+.mat-icon-button i {
+    font-size: 25px;
+}
+
+.mat-icon-button i:hover{
+    color: #42b983;
+}
+

@@ -1,3 +1,4 @@
+import { PagesModule } from './pages/pages.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     SharedMaterialModule,
     HttpClientModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { SidenavService } from 'src/app/back/services/sidenav.service';
-import { ThemeService } from 'src/app/back/services/theme.service';
+import { SidenavService } from 'src/app/services/sidenav.service';
+import { ThemeService } from 'src/app/services/theme.service';
 import { MatSidenav } from '@angular/material/sidenav';
 import { ViewFileComponent } from '../view-file/view-file.component';
 import {MatDialog} from '@angular/material/dialog';
@@ -27,7 +27,7 @@ export class HeaderComponent  {
   urlLanguage: string;
   @ViewChild('drawer') public drawer: MatSidenav;
 
-  foods: Food[] = [
+  languages: Food[] = [
     {value: 'Italiano', viewValue: 'Italiano', imgPais: "assets/img/IT.svg"},
     {value: 'Español', viewValue: 'Español', imgPais: "assets/img/PE.svg"}
   ];

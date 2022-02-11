@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-center">
+    <div class="">
+        <h1>Mis Servicios</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
+        <div class="card border-0 bg-gst-gray p-3" *ngFor="let item of services">
+            <div class="card-body d-flex flex-column justify-content-center align-items-center p-2">
+                <img [src]="item.icon" alt="">
+                <h5 class="card-title text-dark fw-bold mt-2"> {{item.title}} </h5>
+            </div>
+        </div>
+    </div>
+</div>
