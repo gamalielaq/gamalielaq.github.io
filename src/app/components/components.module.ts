@@ -7,10 +7,11 @@ import { SkillsComponent } from './skills/skills.component';
 import { TimeLineComponent } from './time-line/time-line.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
+import { EducacionComponent } from './educacion/educacion.component';
 
 
 const components = [
-    ExperienceComponent, ServicesComponent, SkillsComponent, TimeLineComponent, ProfileComponent, AboutmeComponent
+    ExperienceComponent, ServicesComponent, SkillsComponent, TimeLineComponent, ProfileComponent, AboutmeComponent, EducacionComponent
 ];
 
 @NgModule({

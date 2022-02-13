@@ -22,3 +22,28 @@ footer {
     color: #42b983;
 }
 
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu .item {
+    padding: 1rem;
+}
+
+.menu .item a{ 
+    font-size: 13px;
+    color: #6c757d;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu .item:hover { 
+    color: #96a1aa;
+    transition: 0.2s;
+}
+
+.name {
+    color: #c6c6c6;
+}

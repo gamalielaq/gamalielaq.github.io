@@ -12,4 +12,11 @@ export class PagesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
+  navigate() {
+    document.getElementById(`sd`)?.focus
+  }
+
+
 }

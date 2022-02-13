@@ -1,7 +1,14 @@
 .perfil {
     width: 100%;
-    max-width: 20%;
+    max-width:40%;
 }
+
+@media screen and(min-width: 1200px) {
+    .perfil {
+        max-width: 60%;
+    }       
+}
+
 h1 {
     font-family: var(--bs-font-sans-serif);
 }
@@ -10,4 +17,20 @@ h1 {
 }
 .cv-text:hover {
     text-decoration: underline;
+}
+
+.bi {
+    font-size: 23px;
+    color: #3c3c3cf2;
+}
+
+.card-work {
+    background: #e5e9ea;
+    text-align: center;
+    padding: 25px 15px;
+    h3 {
+        background: linear-gradient(90deg,#1345e6 0%,#ed239f 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }

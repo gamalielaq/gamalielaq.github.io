@@ -1,22 +1,29 @@
-<app-header></app-header>
-<div class="container">
-    <div class="content">
-        <div class="mb-4">
-            <app-profile></app-profile>
-        </div>
-        <div class="mb-4">
-            <!-- <app-aboutme></app-aboutme> -->
-        </div>
-        <div class="mb-4">
-            <app-experience></app-experience>
-        </div>
-        <div class="mb-4">
-            <app-services></app-services>
+<div class="header" id="home">
+    <app-header></app-header> 
+</div>
+<div class="main">
+    <div class="container mb-5">
+        <div class="content">
+            <div class="mb-5" >
+                <app-profile></app-profile>
+            </div>
+            <div class="mb-5 pt-3" >
+                <app-aboutme></app-aboutme>
+            </div>
+            <div class="mb-5 pt-3" id="experience">
+                <app-skills></app-skills>
+            </div>
+            <div class="mb-3 pt-3">
+                <app-experience></app-experience>
+            </div>
+            <div class="mb-5" >
+                <app-educacion></app-educacion>
+            </div>
+            <div class="pt-3" id="services">
+                <app-services></app-services>
+            </div>
         </div>
     </div>
-  
-    <!-- <app-skills></app-skills> -->
-    <!-- <app-time-line></app-time-line> -->
+    <app-footer></app-footer>
 </div>
 
-<app-footer></app-footer>

@@ -1,116 +1,15 @@
 <div class="timeline mt-3">
-    <div class="timeline-item align-items-start pb-1">
+    <div class="timeline-item align-items-start pb-1" *ngFor="let item of data">
         <div class="timeline-badge">
             <i class="fa fa-genderless text-gray-200 fs-1"></i>
         </div>
         <div class="timeline-content ps-2">
-            <span class="fw-bold text-gray-800 pe-3">Front End developer,
-                <span class="text-success fsx-11">07/2020 – 12/2020</span>
+            <span class="fw-bold text-gray-800 pe-3">{{item.cargo}},
+                <span class="text-success fsx-11">{{item.startDate}} – {{item.endDate}}</span>
             </span>
             <div class="symbol symbol-35px bg-light-primary mt-n3 me-2 align-self-center">
-                <span class="text-primary fw-bold me-2">SIGCOMT</span>
-                <!-- <span class="symbol-label bg-light align-items-end">
-                    <img class="mh-25px" src="assets/img/sigcomt.svg" alt="Logo">
-                </span> -->
-                <span class="fst-italic fsx-12 fw-bold text-secondary">- San Isidro Lima Perú</span>
-            </div>
-            <div class="fw-normal fs-7 timeline-content text-justify fs-14">
-                <span class="text-muted">
-                    Trabajé en el desarrollo de una aplicación restfull, proyecto DTW,
-                    mi trabajo erá consumir las APIs desde del back al front,
-                    desarrollando componentes crud, apoyados con la librería angular
-                    material.
-                </span>
-            </div>
-        </div>
-    </div>
-    <div class="timeline-item align-items-start pb-1">
-        <div class="timeline-badge">
-            <i class="fa fa-genderless text-gray-200 fs-1"></i>
-        </div>
-        <div class="timeline-content ps-2">
-            <span class="fw-bold text-gray-800 pe-3">Programador Web,
-                <span class="text-success fsx-11">07/2018 – 12/2019</span>
-            </span>
-            <div class="symbol symbol-35px bg-light-primary mt-n3 me-2 align-self-center">
-                <span class="text-primary fw-bold me-2">GPI</span>
-                <!-- <span class="symbol-label bg-light align-items-end">
-                    <img class="mh-25px" src="assets/img/sigcomt.svg" alt="Logo">
-                </span> -->
-                <span class="fst-italic fsx-12 fw-bold text-secondary">- Trento Italia</span>
-            </div>
-            <div class="fw-normal fs-7 timeline-content d-flex flex-column text-gray-600 text-justify fs-14">
-                <span>
-                    <i class="bi bi-x-diamond-fill "></i>
-                    Consumí las APIS del back y pintar los datos en pantalla de una aplicación web, SISTER.
-                </span>
-                <span>
-                    <i class="bi bi-x-diamond-fill "></i>
-                    Colaboré con el equipo en el desarrollo de un sistema informativo para salud basado en la
-                    arquitectura REST.
-                </span>
-                <span>
-                    <i class="bi bi-x-diamond-fill "></i>
-                    Creación de componentes, diseño, validación de formularios, y llamadas al servidor (API REST).
-                </span>
-            </div>
-        </div>
-    </div>
-    <div class="timeline-item align-items-start pb-1">
-        <div class="timeline-badge">
-            <i class="fa fa-genderless text-gray-200 fs-1"></i>
-        </div>
-        <div class="timeline-content ps-2">
-            <span class="fw-bold text-gray-800 pe-3">Maquetador Web,
-                <span class="text-success fsx-11">02/2018 – 06/2018</span>
-            </span>
-            <div class="symbol symbol-35px bg-light-primary mt-n3 me-2 align-self-center">
-                <span class="text-primary fw-bold me-2">GPI</span>
-                <!-- <span class="symbol-label bg-light align-items-end">
-                    <img class="mh-25px" src="assets/img/sigcomt.svg" alt="Logo">
-                </span> -->
-                <span class="fst-italic fsx-12 fw-bold text-secondary">- Trento Italia</span>
-            </div>
-            <div class="fw-normal fs-7 timeline-content d-flex flex-column text-gray-600 fs-14">
-                <span>
-                    <i class="bi bi-x-diamond-fill "></i>
-                    Creación y diseño formularios.
-                </span>
-                <span>
-                    <i class="bi bi-x-diamond-fill "></i>
-                    Maquetado  y diseño de formularios con Form Manager 3 (FM3), para la recopilacion de información de pacientes.
-                </span>
-                <span>
-                    <i class="bi bi-x-diamond-fill "></i>
-                    Punto de referencia corporativo y soporte para la gestión de informes
-                </span>
-            </div>
-        </div>
-    </div>
-    <div class="timeline-item align-items-start pb-1">
-        <div class="timeline-badge">
-            <i class="fa fa-genderless text-gray-200 fs-1"></i>
-        </div>
-        <div class="timeline-content ps-2">
-            <span class="fw-bold text-gray-800 pe-3">Practicante programador Web,
-                <span class="text-success fsx-11">02/2017 – 01/2018</span>
-            </span>
-            <div class="symbol symbol-35px bg-light-primary mt-n3 me-2 align-self-center">
-                <span class="text-primary fw-bold me-2">Ugel 01</span>
-                <!-- <span class="symbol-label bg-light align-items-end">
-                    <img class="mh-25px" src="assets/img/sigcomt.svg" alt="Logo">
-                </span> -->
-                <span class="fst-italic fsx-12 fw-bold text-secondary">- San Juan de Miraflres</span>
-            </div>
-            <div class="fw-normal fs-7 timeline-content d-flex flex-column fs-14">
-                <span>
-                    <i class="bi bi-x-diamond-fill "></i>
-                    Rediseñó de sitios web para mejorar la navegación y su atractivo visual al usuario.
-                </span>
-                <span>
-                    <i class="bi bi-x-diamond-fill "></i>
-                    Rediseñó de sitios web para mejorar la navegación y su atractivo visual al usuario.
-                </span>
+                <span class="text-primary fw-bold me-2">{{item.empresa}}</span>
+                <span class="fst-italic fsx-12 fw-bold text-secondary">- {{item.direccion}}</span>
             </div>
         </div>
     </div>

@@ -1,17 +1,35 @@
-<header class="header m-0 mt-lg-4 mb-lg-4 mb-lg-0 ">
-    <div class="header-content container align-items-center justify-content-between">
+<header class="header m-0 mb-lg-4 mb-lg-0" #header>
+    <div class="header-content container align-items-center justify-content-end">
         <div class="d-flex align-items-center">
-            <ul class="breadcrumb td-none fw-bold p-0 m-0 fs-14">
-                <li class="breadcrumb-item">
-                    <a class="text-muted td-none ce-pointer" (click)="redirectTo('')">Inicio</a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a class="text-muted td-none ce-pointer" (click)="redirectTo('/portafolio')">My portafolio</a>
-                </li>
-            </ul>
-        </div>
-        <div class="d-flex align-items-center">
-            <form [formGroup]="form">
+            <div class="d-flex align-items-center me-4">
+                <ul class="breadcrumb td-none fw-bold p-0 m-0 fs-14">
+                    <li class="breadcrumb-item">
+                        <a href="#aboutme"  class="text-muted td-none ce-pointer" >Sobre mi</a>
+                    </li>
+
+                    <li class="breadcrumb-item"  >
+                        <a href="#skills" class="text-muted td-none ce-pointer" (click)="redirectTo('')">Habilidades</a>
+                    </li>
+
+                    <li class="breadcrumb-item">
+                        <a href="#experience" class="text-muted td-none ce-pointer" (click)="redirectTo('')">Experiencia</a>
+                    </li>
+
+                    
+                    <!-- <li class="breadcrumb-item">
+                        <a href="#educacion" class="text-muted td-none ce-pointer">Educación</a>
+                    </li> -->
+
+                    <li class="breadcrumb-item">
+                        <a href="#services" class="text-muted td-none ce-pointer" (click)="redirectTo('')">Servicios</a>
+                    </li>
+
+                    <li class="breadcrumb-item">
+                        <a href="#skills" class="text-muted td-none ce-pointer" (click)="redirectTo('/portafolio')">My portafolio</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <form [formGroup]="form">
                 <mat-form-field class="me-4" appearance="fill">
                     <span matPrefix>
                         <img [src]="urlLanguage" width="30">
@@ -26,7 +44,7 @@
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
-            </form>
+            </form> -->
             <label class="switch me-2" for="checkbox">
                 <input type="checkbox" [(ngModel)]="switch" (change)="changeTheme()" id="checkbox" />
                 <div class="slider round">

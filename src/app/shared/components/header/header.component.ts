@@ -1,11 +1,12 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, Inject, HostListener, ElementRef, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { SidenavService } from 'src/app/services/sidenav.service';
 import { ThemeService } from 'src/app/services/theme.service';
 import { MatSidenav } from '@angular/material/sidenav';
 import { ViewFileComponent } from '../view-file/view-file.component';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { DOCUMENT } from '@angular/common';
 
 
 
@@ -20,33 +21,46 @@ interface Food {
   styleUrls: ['./header.component.scss']
 })
 
-export class HeaderComponent  {
+export class HeaderComponent {
   form: FormGroup;
   themes: any[];
   switch: boolean = false;
   urlLanguage: string;
   @ViewChild('drawer') public drawer: MatSidenav;
+  @ViewChild("header") header: ElementRef;
 
   languages: Food[] = [
-    {value: 'Italiano', viewValue: 'Italiano', imgPais: "assets/img/IT.svg"},
-    {value: 'Español', viewValue: 'Español', imgPais: "assets/img/PE.svg"}
+    { value: 'Italiano', viewValue: 'Italiano', imgPais: "assets/img/IT.svg" },
+    { value: 'Español', viewValue: 'Español', imgPais: "assets/img/PE.svg" }
   ];
+
+
   constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private renderer: Renderer2,
     private router: Router,
-    private sidenav : SidenavService,
+    private sidenav: SidenavService,
     private themeService: ThemeService,
-    private dialog :MatDialog,
+    private dialog: MatDialog,
     private fb: FormBuilder,
-    ) { 
-    
+  ) { }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      this.renderer.addClass(this.header.nativeElement, "header-effect");
+    } else {
+      this.renderer.removeClass(this.header.nativeElement, "header-effect");
     }
-    
+  }
+
+
   ngOnInit(): void {
     let sw = localStorage.getItem('switch');
-    if(sw=="true") {
-      this.switch= true;
-    }else {
-      this.switch= false;
+    if (sw == "true") {
+      this.switch = true;
+    } else {
+      this.switch = false;
     }
     this.crearFormulario();
     this.cargarData();
@@ -59,73 +73,73 @@ export class HeaderComponent  {
 
   crearFormulario() {
 
-  //   this.form = new FormGroup({
-  //     language: new FormControl()
-  //  });
+    //   this.form = new FormGroup({
+    //     language: new FormControl()
+    //  });
 
-  console.log(this.form);
+    console.log(this.form);
     this.form = this.fb.group({
-      language  : ['']
+      language: ['']
     })
 
 
     this.form.get('language')?.valueChanges.subscribe((value) => {
       if (value == 'Italiano') {
         this.urlLanguage = 'assets/img/IT.svg';
-      }else {
+      } else {
         this.urlLanguage = 'assets/img/PE.svg';
       }
-      console.log(value); 
+      console.log(value);
     });
-    
-    
-   }
 
 
-   cargarData() {
-      this.form.reset
+  }
+
+
+  cargarData() {
+    this.form.reset
       ({
         language: "Español",
       });
 
 
-    }
+  }
 
 
   redirectTo(route: string): void {
     this.router.navigate([route]);
   }
-  
+
   sideToogle() {
-		this.sidenav.toggle();  
+    this.sidenav.toggle();
   }
-  
+
   changeTheme() {
     console.log(this.switch);
     this.themeService.changeTheme(this.switch);
     this.storage();
   }
   storage() {
-    if(this.switch) {
+    if (this.switch) {
       localStorage.setItem('switch', "true");
-    }else {
+    } else {
       localStorage.setItem('switch', "false");
     }
   }
 
   async dowloandPdfRespuesta() {
-      const byteArray = "";
-      const blobAnswer: Blob = new Blob([byteArray], { type: 'application/pdf' });
-      const url = window.URL.createObjectURL(blobAnswer);
-      const a = document.createElement('a');
-      document.body.appendChild(a);
-      a.setAttribute('style', 'display: none');
-      a.href = url;
-      a.download = 'cv-gamaliel.pdf';
-      a.click();
-      window.URL.revokeObjectURL(url);
-      a.remove();
-    
+    const byteArray = "";
+    const blobAnswer: Blob = new Blob([byteArray], { type: 'application/pdf' });
+    const url = window.URL.createObjectURL(blobAnswer);
+    const a = document.createElement('a');
+    document.body.appendChild(a);
+    a.setAttribute('style', 'display: none');
+    a.href = url;
+    a.download = 'cv-gamaliel.pdf';
+    a.click();
+    window.URL.revokeObjectURL(url);
+    a.remove();
+
   }
 
   downloadCv() {
@@ -134,7 +148,6 @@ export class HeaderComponent  {
     a.setAttribute("download", "cv-gamaliel");
     a.click();
     console.log(a);
-    
   }
 
   openViewCv() {
