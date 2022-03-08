@@ -1,59 +1,77 @@
 .h-6px {
     height: 6px !important;
 }
+
 .fsx-10 {
     font-size: 10px;
 }
+
 .fsx-11 {
     font-size: 11px;
 }
+
 .fsx-12 {
     font-size: 12px;
 }
+
 .fsx-13 {
     font-size: 13px;
 }
+
 .fsx-14 {
     font-size: 13px;
 }
+
 .h-40 {
-  height: 40px;
+    height: 40px;
 }
+
 .w-40 {
-  height: 40px;
+    height: 40px;
 }
+
 .wp-40 {
-  width: 40%;
+    width: 40%;
 }
+
 .wp-45 {
-  width: 45%;
+    width: 45%;
 }
+
 .wp-50 {
-  width: 50%;
+    width: 50%;
 }
+
 .wp-60 {
-  width: 60%;
+    width: 60%;
 }
+
 .wp-70 {
-  width: 70%;
+    width: 70%;
 }
+
 .hp-70 {
-  height: 70%;
+    height: 70%;
 }
+
 .text-justify {
-  text-align: justify;
+    text-align: justify;
 }
+
 .td-none {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 .ta-center {
-  text-align: center;
+    text-align: center;
 }
+
 .fw-500 {
-  font-weight: 500;
-} 
+    font-weight: 500;
+}
+
 .fw-600 {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 // ------ Start switch
@@ -63,11 +81,13 @@
     position: relative;
     width: 38px;
     align-items: center;
-  }
-  .switch input {
-    display:none;
-  }
-  .slider {
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
     background-color: #f0bd0b;
     bottom: 0;
     cursor: pointer;
@@ -77,9 +97,9 @@
     top: 0;
     transition: .4s;
     color: #fff;
-  }
-  
-  .slider  {
+}
+
+.slider {
     .low {
         left: -5px;
         top: -5px;
@@ -99,11 +119,11 @@
     .on {
         display: none;
     }
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked+.slider {
     background-color: #000000;
-    .low { 
+    .low {
         background: #000000;
         color: yellow;
         .off {
@@ -113,91 +133,109 @@
             display: initial;
         }
     }
-  }
-  
-  input:checked + .slider {
-      .low {
+}
+
+input:checked+.slider {
+    .low {
         transform: translateX(18px);
-      }
-  }
-  .slider.round {
+    }
+}
+
+.slider.round {
     border-radius: 34px;
-  }
-  .slider.round:before {
+}
+
+.slider.round:before {
     border-radius: 50%;
-  }
-  // ------ End switch
-  
-  .breadcrumb {
+}
+
+// ------ End switch
+.breadcrumb {
     display: contents;
     li {
         a {
             color: #b5b5c3!important;
             &:hover {
-              color: #9c9ca8!important
+                color: #9c9ca8!important
             }
         }
-
         i:hover {
-          color: #b5b5c3!important;
-          cursor: pointer;
+            color: #b5b5c3!important;
+            cursor: pointer;
         }
     }
 }
+
 .ce-pointer {
-  cursor: pointer;
+    cursor: pointer;
 }
-.bi-brightness-low::before, .bi-brightness-low-fill::before {
-  line-height: 1.2;
+
+.bi-brightness-low::before,
+.bi-brightness-low-fill::before {
+    line-height: 1.2;
 }
+
 .btn.btn-primary {
-  color: #fff;
-  background-color: #8950fc;
-  border-color: #8950fc;
+    color: #fff;
+    background-color: #8950fc;
+    border-color: #8950fc;
 }
+
 .btn.btn-danger {
-  color: #fff;
-  background-color: #f64e60;
-  border-color: #f64e60;
+    color: #fff;
+    background-color: #f64e60;
+    border-color: #f64e60;
 }
 
 .mat-form-field-infix {
-  min-width: 100% !important;
-  width: auto !important;
+    min-width: 100% !important;
+    width: auto !important;
 }
 
 .mat-form-field-prefix {
-  position: relative;
-  // left: 20px;
+    position: relative;
+    // left: 20px;
 }
 
-.mat-select-value, .mat-select-arrow-wrapper, .mat-form-field-underline {
-  display: none !important;
+.mat-select-value,
+.mat-select-arrow-wrapper,
+.mat-form-field-underline {
+    display: none !important;
 }
+
 .cdk-overlay-pane {
-  // left: 1372.21px !important;
+    // left: 1372.21px !important;
 }
 
 .mat-select-panel {
-  min-width: 100% !important;
+    min-width: 100% !important;
 }
-
 
 //
-
 .white {
-  color: white !important;
+    color: white !important;
 }
 
+.yellow {
+    color: #fff250 !important;
+}
 
 .fz-10 {
-  font-size: 10px !important;
+    font-size: 10px !important;
 }
 
 .fz-11 {
-  font-size: 11px !important;
- }
+    font-size: 11px !important;
+}
 
- .fz-12 {
-  font-size: 12px !important;
- }
+.fz-12 {
+    font-size: 12px !important;
+}
+
+.divider {
+    background-color: white;
+}
+
+.br-white {
+    border-right: 1px solid #6a6a6a
+}

@@ -8,10 +8,12 @@ import { TimeLineComponent } from './time-line/time-line.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { EducacionComponent } from './educacion/educacion.component';
+import { LaguagesComponent } from './laguages/laguages.component';
+import { WorksComponent } from './works/works.component';
 
 
 const components = [
-    ExperienceComponent, ServicesComponent, SkillsComponent, TimeLineComponent, ProfileComponent, AboutmeComponent, EducacionComponent
+    ExperienceComponent, ServicesComponent, SkillsComponent, TimeLineComponent, ProfileComponent, AboutmeComponent, EducacionComponent, LaguagesComponent , WorksComponent
 ];
 
 @NgModule({

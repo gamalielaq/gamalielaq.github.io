@@ -1,29 +1,76 @@
-<div class="header" id="home">
-    <app-header></app-header> 
-</div>
-<div class="main">
-    <div class="container mb-5">
-        <div class="content">
-            <div class="mb-5" >
-                <app-profile></app-profile>
+<div class="page">
+    <div class="container" #content>
+        <div>
+            <app-header></app-header>
+        </div>
+        <div class="card-started">
+            <div class="profile no-photo">
+                <div class="slide"></div>
+                <div class="title">
+                    <h3 class="">Gamaliel Abanto Quiroz</h3>
+                    <h6 class="text-cargo">Full Stack Developer</h6>
+
+                    <div class="text-center social">
+                        <i class="bi bi-whatsapp me-3"></i>
+                        <i class="bi bi-linkedin me-3"></i>
+                        <i class="bi bi-facebook me-3"></i>
+                        <i class="bi bi-instagram me-3"></i>
+
+                    </div>
+                </div>
+
+                <div class="links">
+                    <a class="link d-flex align-items-center justify-content-center" href="http://">
+                        <span class="me-2">Descargar cv</span>
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">cloud_download</mat-icon>
+
+                    </a>
+                    <a class="link d-flex align-items-center justify-content-center" href="http://">
+                        <span class="me-2">Contáctame</span>
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">sms</mat-icon>
+                    </a>
+                </div>
             </div>
-            <div class="mb-5 pt-3" >
-                <app-aboutme></app-aboutme>
+
+        </div>
+        <!-- <div class="card-inner active animated">
+            <div class="card-wrap">
+                <div style="color: red;">
+                    Sobre mi
+                </div>
             </div>
-            <div class="mb-5 pt-3" id="experience">
-                <app-skills></app-skills>
-            </div>
-            <div class="mb-3 pt-3">
-                <app-experience></app-experience>
-            </div>
-            <div class="mb-5" >
-                <app-educacion></app-educacion>
-            </div>
-            <div class="pt-3" id="services">
-                <app-services></app-services>
+        </div> -->
+        <div class="card-inner active animated" *ngFor="let item of menu" [ngClass]="{'fadeInLeft': item.active, 'fadeOutLeft': !item.active }">
+            <div class="card-wrap">
+                <div *ngIf="item.id == 'aboutme'">
+                    <app-aboutme></app-aboutme>
+                </div>
+                <div *ngIf="item.id == 'resumen'">
+                    <h4 class="yellow">Resumen</h4>
+                    <hr class="divider">
+
+                    <div class="row">
+                        <div class="col br-white">
+                            <app-experience></app-experience>
+                        </div>
+                        <div class="col">
+                            <app-educacion></app-educacion>
+                        </div>
+                        <hr class="divider">
+                        <div class="col-12">
+                            <app-skills></app-skills>
+                        </div>
+                        <hr class="divider">
+                        <div class="col-12">
+                            <app-laguages></app-laguages>
+                        </div>
+                    </div>
+
+                </div>
+                <div *ngIf="item.id == 'work'">
+                    <app-works></app-works>
+                </div>
             </div>
         </div>
     </div>
-    <app-footer></app-footer>
 </div>
-

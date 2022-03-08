@@ -1,3 +1,4 @@
+import { SharedMaterialModule } from 'src/app/shared/shared-material.module';
 import { SharedComponentModule } from './../shared/components/shared-component.module';
 import { ComponentsModule } from './../components/components.module';
 import { NgModule } from '@angular/core';
@@ -9,7 +10,8 @@ import { PagesComponent } from './pages.component';
   imports: [
     CommonModule,
     ComponentsModule,
-    SharedComponentModule
+    SharedComponentModule,
+    SharedMaterialModule
   ]
 })
 export class PagesModule { }

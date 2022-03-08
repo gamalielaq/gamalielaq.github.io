@@ -1,3 +1,4 @@
+import { HelperService } from './../../../helpers/helpers.service';
 import { Component, ViewChild, Inject, HostListener, ElementRef, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { SidenavService } from 'src/app/services/sidenav.service';
@@ -7,6 +8,7 @@ import { ViewFileComponent } from '../view-file/view-file.component';
 import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { DOCUMENT } from '@angular/common';
+import { MENU } from '../../../helpers/constans';
 
 
 
@@ -26,6 +28,7 @@ export class HeaderComponent {
   themes: any[];
   switch: boolean = false;
   urlLanguage: string;
+  menu = MENU;
   @ViewChild('drawer') public drawer: MatSidenav;
   @ViewChild("header") header: ElementRef;
 
@@ -43,6 +46,7 @@ export class HeaderComponent {
     private themeService: ThemeService,
     private dialog: MatDialog,
     private fb: FormBuilder,
+    private helperService: HelperService
   ) { }
 
   @HostListener('window:scroll', [])
@@ -64,13 +68,21 @@ export class HeaderComponent {
     }
     this.crearFormulario();
     this.cargarData();
+    const itemId = localStorage.getItem('itemdId');
+    const nagigated = itemId? itemId: 'aboutme';
+    this.navigated(nagigated);
+    
   }
 
   ngAfterViewInit(): void { //Despues de cargar mi pagina
     this.sidenav.setSidenav(this.drawer);
   }
 
-
+  navigated(itemId: string) {
+    this.helperService.setMenu = itemId;
+    localStorage.setItem('itemdId', itemId);
+  }
+  
   crearFormulario() {
 
     //   this.form = new FormGroup({
