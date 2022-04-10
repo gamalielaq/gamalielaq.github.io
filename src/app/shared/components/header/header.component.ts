@@ -10,8 +10,6 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { DOCUMENT } from '@angular/common';
 import { MENU } from '../../../helpers/constans';
 
-
-
 interface Food {
   value: string;
   viewValue: string;
@@ -66,12 +64,12 @@ export class HeaderComponent {
     } else {
       this.switch = false;
     }
-    this.crearFormulario();
+    this.builForm();
     this.cargarData();
     const itemId = localStorage.getItem('itemdId');
-    const nagigated = itemId? itemId: 'aboutme';
+    const nagigated = itemId ? itemId : 'aboutme';
     this.navigated(nagigated);
-    
+
   }
 
   ngAfterViewInit(): void { //Despues de cargar mi pagina
@@ -79,21 +77,18 @@ export class HeaderComponent {
   }
 
   navigated(itemId: string) {
+    if (itemId === 'tips') {
+      this.router.navigate(['/tips']);
+      return;
+    }
     this.helperService.setMenu = itemId;
     localStorage.setItem('itemdId', itemId);
   }
-  
-  crearFormulario() {
 
-    //   this.form = new FormGroup({
-    //     language: new FormControl()
-    //  });
-
-    console.log(this.form);
+  builForm() {
     this.form = this.fb.group({
       language: ['']
     })
-
 
     this.form.get('language')?.valueChanges.subscribe((value) => {
       if (value == 'Italiano') {
@@ -103,18 +98,11 @@ export class HeaderComponent {
       }
       console.log(value);
     });
-
-
   }
 
 
   cargarData() {
-    this.form.reset
-      ({
-        language: "Español",
-      });
-
-
+    this.form.reset({language: "Español"});
   }
 
 

@@ -1,3 +1,4 @@
+import { TipsModule } from './tips/tips.module';
 import { SharedMaterialModule } from 'src/app/shared/shared-material.module';
 import { SharedComponentModule } from './../shared/components/shared-component.module';
 import { ComponentsModule } from './../components/components.module';
@@ -11,7 +12,7 @@ import { PagesComponent } from './pages.component';
     CommonModule,
     ComponentsModule,
     SharedComponentModule,
-    SharedMaterialModule
+    SharedMaterialModule,
   ]
 })
 export class PagesModule { }

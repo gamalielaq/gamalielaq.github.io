@@ -1,1 +1,22 @@
-<p class="yellow"> tips works!</p>
+<!-- <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+    <mat-drawer-content>Main content</mat-drawer-content>
+</mat-drawer-container> -->
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer mode="side" opened>
+        <div class="sidenav">
+            <div class="drawer">
+                <app-menu></app-menu>
+                <!-- <button (click)="showFiller = !showFiller" mat-raised-button>
+                    Toggle extra text
+                </button> -->
+            </div>
+        </div>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        sss
+    </div>
+
+</mat-drawer-container>

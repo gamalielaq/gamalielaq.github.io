@@ -1,10 +1,17 @@
 .header {
-    margin-right: 8px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    right: 0;
     left: 0;
-    top: 15px;
-    float: left;
-    width: 72px;
+    z-index: 99999;
+    @media screen and(min-width: 768px) {
+        position: relative;
+        margin-left: -85px;
+        // left: 0;
+        top: 15px;
+        float: left;
+        width: 72px;    
+    }
 }
 .header { 
     border-radius: 0.3rem;
@@ -23,9 +30,15 @@
 }
 
 .header ul li.item:not(:last-child) { 
-    border-bottom: 0.5px solid #72727266;
+    @media screen and(min-width: 768px) { 
+        border-bottom: 0.5px solid #72727266;
+    }
 }
 .header ul li p{ 
     margin: 0;
     font-size: 11px;
+}
+
+.breadcrumb {
+    display: flex !important;
 }

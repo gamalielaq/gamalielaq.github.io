@@ -1,41 +1,10 @@
 <header class="header" #header>
-   <div class="menu">
-    <ul class="breadcrumb td-none fw-bold p-0 m-0 fs-14">
-        <li class="item" *ngFor="let item of menu" (click)="navigated(item.id)">
-            <mat-icon aria-hidden="false" aria-label="Example home icon">{{item.icon}}</mat-icon>
+    <div class="menu">
+        <ul class="breadcrumb td-none fw-bold p-0 m-0 fs-14">
+            <li class="item" *ngFor="let item of menu" (click)="navigated(item.id)">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">{{item.icon}}</mat-icon>
                 <p>{{item.name}}</p>
-        </li>
-        <!-- <li class="item">
-            <mat-icon aria-hidden="false" aria-label="Example home icon">person</mat-icon>
-            <p>Resumen</p>
-        </li> -->
-    </ul>
-   </div>
+            </li>
+        </ul>
+    </div>
 </header>
-
-
-<!-- <form [formGroup]="form">
-                <mat-form-field class="me-4" appearance="fill">
-                    <span matPrefix>
-                        <img [src]="urlLanguage" width="30">
-                    </span>
-                    <mat-select formControlName="language">
-                        <mat-option *ngFor="let item of languages" [value]="item.value">
-                            <div class="d-flex">
-
-                                <img class="me-1" [src]="item.imgPais" alt="Peru" width="30">
-                                {{item.viewValue}}
-                            </div>
-                        </mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </form> -->
-<!-- <label class="switch me-2" for="checkbox">
-                <input type="checkbox" [(ngModel)]="switch" (change)="changeTheme()" id="checkbox" />
-                <div class="slider round">
-                    <div class="low">
-                        <i class="bi bi-brightness-low-fill on"></i>
-                        <i class="bi bi-brightness-low off"></i>
-                    </div>
-                </div>
-            </label> -->
