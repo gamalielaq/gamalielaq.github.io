@@ -1,77 +1,75 @@
 <div class="page">
     <div>
     </div>
- 
-        <app-header class="header-mobile"></app-header>
-        <div class="container mobile" #content>
-            <app-header class="header-deskop"></app-header>
-            <app-profile-picture></app-profile-picture>
-            <div class="card-inner active animated" *ngFor="let item of menu" [ngClass]="{'fadeInLeft': item.active, 'fadeOutLeft': !item.active }">
-                <div class="card-wrap">
-                    <div *ngIf="item.id == 'aboutme'">
-                        <app-aboutme></app-aboutme>
-                    </div>
-                    <div *ngIf="item.id == 'resumen'">
-                        <h4 class="yellow">Resumen</h4>
-                        <hr class="divider">
-    
-                        <div class="row">
-                            <div class="col br-white">
-                                <app-experience></app-experience>
-                            </div>
-                            <div class="col">
-                                <app-educacion></app-educacion>
-                            </div>
-                            <hr class="divider">
-                            <div class="col-12">
-                                <app-skills></app-skills>
-                            </div>
-                            <hr class="divider">
-                            <div class="col-12">
-                                <app-laguages></app-laguages>
-                            </div>
+
+    <app-header class="header-mobile"></app-header>
+    <div class="container mobile" #content>
+        <app-header class="header-deskop"></app-header>
+        <app-profile-picture></app-profile-picture>
+        <div class="card-inner active mb-5 animated" *ngFor="let item of menu"
+            [ngClass]="{'fadeInLeft': item.active, 'fadeOutLeft': !item.active }">
+            <div class="card-wrap wrap-md">
+                <div *ngIf="item.id == 'aboutme'">
+                    <app-aboutme></app-aboutme>
+                </div>
+                <div *ngIf="item.id == 'resumen'">
+                    <h4 class="yellow">Resumen</h4>
+                    <hr class="divider">
+
+                    <div class="row">
+                        <div class="col br-white">
+                            <app-experience></app-experience>
                         </div>
-    
+                        <div class="col">
+                            <app-educacion></app-educacion>
+                        </div>
+                        <hr class="divider">
+                        <div class="col-12">
+                            <app-skills></app-skills>
+                        </div>
+                        <hr class="divider">
+                        <div class="col-12">
+                            <app-laguages></app-laguages>
+                        </div>
                     </div>
-                    <div *ngIf="item.id == 'work'">
-                        <app-works></app-works>
-                    </div>
-                 
+
+                </div>
+                <div *ngIf="item.id == 'work'">
+                    <app-works></app-works>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="wrap-mobile">
+            <div class="card-wrap mb-5">
+                <div>
+                    <app-aboutme></app-aboutme>
                 </div>
             </div>
+            <div class="card-wrap  mb-5">
+                <app-works></app-works>
+            </div>
+            <h4 class="yellow">Resumen</h4>
+            <hr class="divider">
+            <div class="row">
+                <div class="col br-white mb-5">
+                    <app-experience></app-experience>
+                </div>
+                <div class="col mb-5">
+                    <app-educacion></app-educacion>
+                </div>
+                <hr class="divider">
+                <div class="col-12 mb-5">
+                    <app-skills></app-skills>
+                </div>
+                <hr class="divider">
+                <div class="col-12 mb-5">
+                    <app-laguages></app-laguages>
+                </div>
+            </div>
+        </div>
+
         <!-- <app-aboutme></app-aboutme> -->
     </div>
 </div>
-
-
-
-
-
-<!-- <div class="loader">
-                        <mat-spinner></mat-spinner>
-                    </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="card-inner active animated">
-            <div class="card-wrap">
-                <div style="color: red;">
-                    Sobre mi
-                </div>
-            </div>
-        </div> -->

@@ -21,6 +21,7 @@
     text-align: center;
     padding: 0.9rem 0.7rem;
     color: #fff;
+    width: 100%;
 }
 
 .header ul li.item:hover { 
@@ -28,7 +29,11 @@
     color: #fff250;
     transition: 0.5s;
 }
-
+.breadcrumb {
+    @media screen and(max-width: 992px) { 
+        flex-wrap: initial !important;
+    }
+}
 .header ul li.item:not(:last-child) { 
     @media screen and(min-width: 768px) { 
         border-bottom: 0.5px solid #72727266;

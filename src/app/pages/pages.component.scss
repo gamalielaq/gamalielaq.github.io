@@ -96,3 +96,16 @@
     visibility: hidden;
     z-index: 9;
 }
+
+
+.wrap-md {
+    @media screen and(max-width: 992px) { 
+        display: none;
+    }
+}
+
+.wrap-mobile {
+    @media screen and(min-width: 992px) { 
+        display: none;
+    }
+}
