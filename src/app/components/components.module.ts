@@ -11,10 +11,11 @@ import { EducacionComponent } from './educacion/educacion.component';
 import { LaguagesComponent } from './laguages/laguages.component';
 import { WorksComponent } from './works/works.component';
 import { ProfilePictureComponent } from './profile-picture/profile-picture.component';
+import { FeetComponent } from './feet/feet.component';
 
 
 const components = [
-    ExperienceComponent, ServicesComponent, SkillsComponent, TimeLineComponent, ProfileComponent, AboutmeComponent, EducacionComponent, LaguagesComponent , WorksComponent, ProfilePictureComponent
+    ExperienceComponent, ServicesComponent, SkillsComponent, TimeLineComponent, ProfileComponent, AboutmeComponent, EducacionComponent, LaguagesComponent , WorksComponent, ProfilePictureComponent, FeetComponent
 ];
 
 @NgModule({

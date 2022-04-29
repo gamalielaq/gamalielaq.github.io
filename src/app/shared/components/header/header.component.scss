@@ -4,10 +4,9 @@
     right: 0;
     left: 0;
     z-index: 99999;
-    @media screen and(min-width: 768px) {
+    @media screen and(min-width: 992px) {
         position: relative;
         margin-left: -85px;
-        // left: 0;
         top: 15px;
         float: left;
         width: 72px;    
