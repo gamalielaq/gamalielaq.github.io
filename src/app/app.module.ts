@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedMaterialModule } from 'src/app/shared/shared-material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SharedMaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
-    PagesModule
+    PagesModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

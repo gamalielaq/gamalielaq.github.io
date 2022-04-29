@@ -6,11 +6,12 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ThemeService } from '../../services/theme.service';
 import { ViewFileComponent } from './view-file/view-file.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, SidebarComponent, ViewFileComponent],
+  declarations: [HeaderComponent, FooterComponent, SidebarComponent, ViewFileComponent, LoaderComponent],
   imports: [CommonModule,SharedMaterialModule],
-  exports: [HeaderComponent, FooterComponent, SidebarComponent],
+  exports: [HeaderComponent, FooterComponent, SidebarComponent, LoaderComponent],
   entryComponents: [],
   providers:[ThemeService]
 })

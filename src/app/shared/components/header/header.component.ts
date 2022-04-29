@@ -9,6 +9,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { DOCUMENT } from '@angular/common';
 import { MENU } from '../../../helpers/constans';
+import { LoaderService } from './../../services/loader.service';
+import { pipe, of } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 
 interface Food {
   value: string;
@@ -44,7 +47,8 @@ export class HeaderComponent {
     private themeService: ThemeService,
     private dialog: MatDialog,
     private fb: FormBuilder,
-    private helperService: HelperService
+    private helperService: HelperService,
+    private _loaderService: LoaderService
   ) { }
 
   @HostListener('window:scroll', [])
@@ -78,7 +82,10 @@ export class HeaderComponent {
 
   navigated(itemId: string) {
     if (itemId === 'tips') {
-      this.router.navigate(['/tips']);
+      this._loaderService.on().subscribe( resp => {
+        this.router.navigate(['/tips']);
+        this._loaderService.Off();
+      });
       return;
     }
     this.helperService.setMenu = itemId;
